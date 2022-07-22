@@ -1,3 +1,17 @@
+This repo is forked from gocloak v11.2.0 and aimed to support keycloak 18.0.2
+
+Please notice that the following test functions are removed because 'script upload' is deprecated:
+- Test_RetrospectRequestingPartyToken
+- Test_GetRequestingPartyPermissions
+- Test_GetRequestingPartyPermissionDecision
+- Test_GetRequestingPartyToken
+- Test_CreateListGetUpdateDeletePolicy
+- Test_JSPolicy
+- Test_AggregatedPolicy
+- Test_CreateListGetUpdateDeletePermission
+
+Except for the functions above, all test cases are passed!
+
 # gocloak
 
 [![codebeat badge](https://codebeat.co/badges/18a37f35-6a95-4e40-9e78-272233892332)](https://codebeat.co/projects/github-com-nerzal-gocloak-main)

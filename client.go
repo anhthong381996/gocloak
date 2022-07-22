@@ -259,7 +259,7 @@ func (client *gocloak) GetServerInfo(ctx context.Context, accessToken string) (*
 
 	resp, err := client.getRequestWithBearerAuth(ctx, accessToken).
 		SetResult(&result).
-		Get(makeURL(client.basePath, "auth", "admin", "serverinfo"))
+		Get(makeURL(client.basePath, "admin", "serverinfo"))
 
 	if err := checkForError(resp, err, errMessage); err != nil {
 		return nil, err

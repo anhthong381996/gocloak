@@ -11,7 +11,7 @@ import (
 
 func BenchmarkLogin(b *testing.B) {
 	cfg := GetConfig(b)
-	client := gocloak.NewClient(cfg.HostName)
+	client := gocloak.NewClient(cfg.HostName, gocloak.SetAuthRealms("realms"), gocloak.SetAuthAdminRealms("admin/realms"))
 	SetUpTestUser(b, client)
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
@@ -29,7 +29,7 @@ func BenchmarkLogin(b *testing.B) {
 
 func BenchmarkLoginParallel(b *testing.B) {
 	cfg := GetConfig(b)
-	client := gocloak.NewClient(cfg.HostName)
+	client := gocloak.NewClient(cfg.HostName, gocloak.SetAuthRealms("realms"), gocloak.SetAuthAdminRealms("admin/realms"))
 	SetUpTestUser(b, client)
 	b.ResetTimer()
 	b.RunParallel(func(pb *testing.PB) {
