@@ -12,6 +12,8 @@ Please notice that the following test functions are removed because 'script uplo
 
 Except for the functions above, all test cases are passed!
 
+**It only contains some minor changes; please just use my repo as an example for [Nerzal/gocloak](https://github.com/Nerzal/gocloak)**
+
 # gocloak
 
 [![codebeat badge](https://codebeat.co/badges/18a37f35-6a95-4e40-9e78-272233892332)](https://codebeat.co/projects/github-com-nerzal-gocloak-main)
